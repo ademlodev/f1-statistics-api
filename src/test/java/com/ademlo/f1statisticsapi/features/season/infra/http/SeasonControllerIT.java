@@ -37,4 +37,17 @@ class SeasonControllerIT {
                 .body("[0].year", not(emptyString()))
                 .body("[0].year", greaterThan(1949));
     }
+
+    @Test
+    @DisplayName("Given list season file return empty list when error on file")
+    void givenListSeasonFileGetSeasonListThenReturnEmptyList(){
+        given()
+                .contentType(ContentType.JSON)
+                .when()
+                .get("/season")
+                .then()
+                .statusCode(200)
+                .contentType(ContentType.JSON)
+                .body("$.size()", equalTo(0));
+    }
 }

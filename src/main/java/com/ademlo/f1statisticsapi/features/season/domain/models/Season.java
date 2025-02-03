@@ -1,4 +1,4 @@
-package com.ademlo.f1statisticsapi.features.season.domain;
+package com.ademlo.f1statisticsapi.features.season.domain.models;
 
 public class Season {
     private final Integer code;

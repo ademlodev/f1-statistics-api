@@ -1,6 +1,7 @@
-package com.ademlo.f1statisticsapi.features.season.infra.persistence;
+package com.ademlo.f1statisticsapi.features.season.infra.persistence.mapper;
 
-import com.ademlo.f1statisticsapi.features.season.domain.Season;
+import com.ademlo.f1statisticsapi.features.season.domain.models.Season;
+import com.ademlo.f1statisticsapi.features.season.infra.persistence.SeasonEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
