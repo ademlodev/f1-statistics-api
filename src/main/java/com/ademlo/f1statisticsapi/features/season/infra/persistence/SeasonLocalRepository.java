@@ -12,6 +12,8 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Component
@@ -33,7 +35,7 @@ public class SeasonLocalRepository implements SeasonRepository {
             return seasonDBMapper.toDomain(seasons);
         } catch (IOException e) {
             LOG.error("Season file read error");
-            return new ArrayList<>();
+            return Collections.emptyList();
         }
     }
 }
